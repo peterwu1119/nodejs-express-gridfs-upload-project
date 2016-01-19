@@ -14,7 +14,7 @@ app.get('/upload.html', function (req, res) {
     res.sendFile( __dirname + "/" + "upload.html" );
 })
 
-app.post('/picture' , upload.single('file'), function(req , res){
+app.post('/upload' , upload.single('file'), function(req , res){
     var db = new mongo.Db('test', new mongo.Server("127.0.0.1", 27017));
 
     db.open(function (err , db) {
